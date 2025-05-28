@@ -1,4 +1,4 @@
-// backend/controllers/chatController.js
+
 const OpenAI = require("openai");
 const Message = require("../models/Message");
 
@@ -10,10 +10,10 @@ const chatWithBot = async (req, res) => {
   const { message } = req.body;
 
   try {
-    // // Save user message to DB
+    //
     // await Message.create({ role: "user", content: message });
 
-    // // Send message to OpenAI
+    // 
     // const completion = await openai.chat.completions.create({
     //   model: "gpt-3.5-turbo",
     //   messages: [{ role: "user", content: message }],
@@ -21,7 +21,7 @@ const chatWithBot = async (req, res) => {
 
     // const botReply = completion.choices[0].message.content;
 
-    // // Save bot response to DB
+   
     const botReply = "This is a mock reply. Please configure your OpenAI billing.";
     await Message.create({ role: "user", content: message });
     await Message.create({ role: "bot", content: botReply });
