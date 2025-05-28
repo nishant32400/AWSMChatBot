@@ -7,7 +7,7 @@ function App() {
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  // Fetch chat history on load
+
   useEffect(() => {
     axios.get("http://localhost:5000/api/chat/history")
       .then(res => {
